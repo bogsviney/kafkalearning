@@ -17,4 +17,5 @@ public class MessageController {
     public void publish(@RequestBody MessageRequest request) {
         kafkaTemplate.send("mytopic", request.message());
     }
+
 }
